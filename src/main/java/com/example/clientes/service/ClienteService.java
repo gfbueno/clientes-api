@@ -1,6 +1,7 @@
 package com.example.clientes.service;
 
 import com.example.clientes.domain.Cliente;
+import com.example.clientes.exception.CpfExistenteException;
 import com.example.clientes.repository.ClienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -29,7 +30,10 @@ public class ClienteService {
 
     public Cliente salvar(Cliente cliente){
         // Posteriormente, adicionar regras de negócio aqui.
-        // Ex: validar CPF, email, etc.
+        Optional<Cliente> clienteExistente = clienteRepository.findByCpf(cliente.getCpf());
+        if (clienteExistente.isPresent() && !clienteExistente.get().getId().equals(cliente.getId())){
+            throw new CpfExistenteException("O CPF informado já está cadastrado.");
+        }
         return clienteRepository.save(cliente);
     }
 

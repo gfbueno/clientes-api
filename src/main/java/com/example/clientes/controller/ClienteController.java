@@ -2,6 +2,7 @@ package com.example.clientes.controller;
 
 import com.example.clientes.domain.Cliente;
 import com.example.clientes.service.ClienteService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -35,7 +36,7 @@ public class ClienteController {
     }
 
     @PostMapping
-    public ResponseEntity<Cliente> salvar(@RequestBody Cliente cliente){
+    public ResponseEntity<Cliente> salvar(@Valid @RequestBody Cliente cliente){
         Cliente novoCliente = clienteService.salvar(cliente);
         return ResponseEntity.status(HttpStatus.CREATED).body(novoCliente);
     }
