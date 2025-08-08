@@ -1,10 +1,10 @@
 # clientes-api
 
-<img alt="Spring Boot" src="https://img.shields.io/badge/Spring_Boot-F2F4F9?style=for-the-badge&logo=spring-boot">
-<img alt="Java 21" src="https://img.shields.io/badge/Java-21-blue.svg?style=for-the-badge&logo=openJDK">
-<img alt="H2 Database" src="https://img.shields.io/badge/H2-Database-orange.svg?style=for-the-badge&logo=h2">
-<img alt="Maven" src="https://img.shields.io/badge/Maven-3.x-red.svg?style=for-the-badge&logo=apache-maven">
-<img alt="Docker" src="https://img.shields.io/badge/Docker-white?style=for-the-badge&logo=docker">
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-gray?style=for-the-badge&logo=spring-boot)
+![Java 21](https://img.shields.io/badge/Java-21-orange.svg?style=for-the-badge&logo=openJDK)
+![H2 Database](https://img.shields.io/badge/H2-Database-orange.svg?style=for-the-badge&logo=h2)
+![Maven](https://img.shields.io/badge/Maven-3.x-orange.svg?style=for-the-badge&logo=apache-maven)
+![Docker](https://img.shields.io/badge/Docker-gray?style=for-the-badge&logo=docker)
 
 ---
 
