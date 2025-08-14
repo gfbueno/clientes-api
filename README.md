@@ -13,6 +13,9 @@
 Uma API REST completa para gerenciar o cadastro de clientes e seus endereços, desenvolvida com **Java 21** e **Spring Boot 3.x**. O projeto implementa um CRUD (Create, Read, Update, Delete) seguindo as boas práticas de separação de responsabilidades (Controller, Service, Repository, Domain) e é ideal para servir como base de portfólio. A aplicação é **containerizada com Docker**, facilitando a execução em qualquer ambiente.
 
 ---
+-  📌 **Status do Projeto:** Em andamento.
+- 📚 **Mentoria:** Desenvolvido com acompanhamento de um colega experiente, recebendo feedback contínuo sobre código, arquitetura e boas práticas de mercado.
+---
 
 ## Tecnologias Utilizadas
 
