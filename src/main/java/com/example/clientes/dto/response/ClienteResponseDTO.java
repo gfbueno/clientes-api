@@ -1,40 +1,24 @@
-package com.example.clientes.domain;
+package com.example.clientes.dto.response;
 
-import jakarta.persistence.*;
-import jakarta.validation.Valid;
-import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Pattern;
+import com.example.clientes.domain.Cliente;
+import com.example.clientes.domain.Endereco;
 
-@Entity
-public class Cliente {
+public class ClienteResponseDTO {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String nome;
-
     private String cpf;
-
     private String email;
-
     private String telefone;
-
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "endereco_id", referencedColumnName = "id")
     private Endereco endereco;
 
-    public Cliente() {
-    }
-
-    public Cliente(String nome, String cpf, String email, String telefone, Endereco endereco) {
-        this.nome = nome;
-        this.cpf = cpf;
-        this.email = email;
-        this.telefone = telefone;
-        this.endereco = endereco;
+    public ClienteResponseDTO(Cliente cliente) {
+        this.id = cliente.getId();
+        this.nome = cliente.getNome();
+        this.cpf = cliente.getCpf();
+        this.email = cliente.getEmail();
+        this.telefone = cliente.getTelefone();
+        this.endereco = cliente.getEndereco();
     }
 
     public Long getId() {
